@@ -13,9 +13,24 @@ h4{
 .submit-area input{
     font-size: 22px;
 }
-
-
-
+#transaction-area{
+    display: none;
+}
+.status{
+    margin: 0 20px;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+.deposit{
+    background-color: slateblue;
+}
+.withdraw{
+    background-color: lightsalmon;
+}
+.balance{
+    background-color: orange;
+}
 
 
 
