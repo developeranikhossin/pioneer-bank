@@ -17,16 +17,23 @@ depositButton.addEventListener("click", function(){
     const depositNumber = parseFloat(depositAmount);
 
 
-    const currentDeposit = document.getElementById("currentDeposit").innerText;
-    const currentDepositNumber = parseFloat(currentDeposit);
-    const totalDeposit = depositNumber + currentDepositNumber;
-    
+    // const currentDeposit = document.getElementById("currentDeposit").innerText;
+    // const currentDepositNumber = parseFloat(currentDeposit);
+    // const totalDeposit = depositNumber + currentDepositNumber;
+    // document.getElementById("currentDeposit").innerText = totalDeposit;
 
-    document.getElementById("currentDeposit").innerText = totalDeposit;
+    updateSpanText("currentDeposit", depositNumber);
+    updateSpanText("currentBalance", depositNumber);
+
     document.getElementById("depositAmount").value = "";
 })
 
-
+function updateSpanText(id, depositNumber){
+    const current = document.getElementById(id).innerText;
+    const currentNumber = parseFloat(current);
+    const totalAmount = depositNumber + currentNumber;
+    document.getElementById(id).innerText = totalAmount;
+}
 
 
 
